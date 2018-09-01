@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-docker-express-base",
+  "version": "1.0.0",
+  "description": "A Dockerized Node.js (Express) Web API with SAML",
+  "main": "index.js",
+  "repository": "https://github.com/ericnograles/nodejs-docker-express-base.git",
+  "author": "Eric Nograles <grales@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "debug": "nodemon -e js,json,yaml,yml,graphql --ignore \"node_modules\" --watch ./ --exec \"yarn install && node\" --inspect=0.0.0.0:5858 --nolazy index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "joi": "^13.6.0",
+    "lodash": "^4.17.10",
+    "passport": "^0.4.0",
+    "passport-saml": "^0.35.0",
+    "qs": "^6.5.2",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}

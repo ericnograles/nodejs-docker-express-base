@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    container_name: nodejs_docker_express_base
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - 30001:3001 # Web API
+      - 30002:5858 # Node Debugger
+    expose:
+      - 3001
+      - 5858
+    environment:
+      NODE_ENV: test
+      PORT: 3001
+    restart: always
